@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">BookKeep</string>
+    <string name="title">本月已消费</string>
+    <string name="bill">账单</string>
+    <string name="dateToday">2021-07-01</string>
+</resources>

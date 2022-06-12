@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="30dp"
+        android:background="@drawable/item"
+        android:orientation="vertical">
+
+        <RadioGroup
+            android:id="@+id/RG_ioty"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="30dp"
+            android:orientation="horizontal">
+            <RadioButton
+                android:id="@+id/rb_out"
+                android:layout_width="wrap_content"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="支出"/>
+            <RadioButton
+                android:id="@+id/rb_in"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="收入"/>
+        </RadioGroup>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <RadioGroup
+                android:id="@+id/RG_type_out"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="30dp"
+                android:orientation="horizontal">
+                <RadioButton
+                    android:id="@+id/rb_cf"
+                    android:layout_width="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="吃饭"/>
+                <RadioButton
+                    android:id="@+id/rb_sj"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="睡觉"/>
+            </RadioGroup>
+
+            <RadioGroup
+                android:id="@+id/RG_type_in"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="30dp"
+                android:visibility="invisible"
+                android:orientation="horizontal">
+                <RadioButton
+                    android:id="@+id/rb_gz"
+                    android:layout_width="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="工资"/>
+                <RadioButton
+                    android:id="@+id/rb_qt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="乞讨"/>
+            </RadioGroup>
+
+
+        </LinearLayout>
+
+
+
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical"
+        android:background="#ffee88"
+        android:paddingHorizontal="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:background="@mipmap/bt_bg"
+            android:gravity="center"
+            android:layout_marginVertical="10dp"
+            android:paddingHorizontal="20dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:gravity="center"
+                android:textColor="@color/black"
+                android:text="备注: "
+                android:contextClickable="false"
+                android:textSize="17sp" />
+
+            <EditText
+                android:id="@+id/bz"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:hint=" 点此填写备注"
+                android:textCursorDrawable="@null"
+                android:background="@null"
+                android:layout_weight="1" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:gravity="center"
+                android:text=" ¥ "
+                android:textColor="@color/black"
+                android:textSize="25sp"/>
+
+            <EditText
+                android:id="@+id/et"
+                android:layout_width="match_parent"
+                android:background="@null"
+                android:layout_height="50dp"
+                android:layout_weight="2"
+                android:textSize="25sp"
+                android:hint="0.00"
+                android:gravity="center"
+                android:textCursorDrawable="@null" />
+
+        </LinearLayout>
+
+        <android.inputmethodservice.KeyboardView
+            android:id="@+id/kv_keyboard"
+            android:background="#ffee88"
+            android:layout_width="match_parent"
+            android:keyBackground="@drawable/keyboard_selector_bg"
+            android:keyTextColor="#333333"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:paddingVertical="10dp"
+            android:shadowColor="#FFFFFF"
+            android:shadowRadius="0.0"
+            android:layout_height="wrap_content"
+             />
+
+    </LinearLayout>
+
+
+
+
+
+</RelativeLayout>
